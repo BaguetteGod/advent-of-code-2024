@@ -11,7 +11,7 @@ import (
 
 func SolutionA() {
 	start := time.Now()
-	r, _ := regexp.Compile("mul\\([0-9]{1,3},[0-9]{1,3}\\)")
+	r, _ := regexp.Compile(`mul\([0-9]{1,3},[0-9]{1,3}\)`)
 	replacer := strings.NewReplacer("mul(", "", ")", "")
 	list := [][]int{}
 
