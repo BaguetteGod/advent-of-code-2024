@@ -15,9 +15,9 @@ func SolutionB() {
 	replacer := strings.NewReplacer("mul(", "", ")", "")
 	list := [][]int{}
 
+	include := true
 	lib.ReadFileByLine("day3/input.txt", func(line string) {
 		matches := r.FindAllString(line, -1)
-		include := true
 		for _, match := range matches {
 			if match == "do()" {
 				include = true
